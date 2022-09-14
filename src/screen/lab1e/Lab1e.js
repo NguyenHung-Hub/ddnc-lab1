@@ -10,7 +10,7 @@ import {
 import { RadioButton } from "react-native-paper";
 import eye from "../../../assets/eye.png";
 
-export default function Lab1e() {
+export default function Lab1e({ navigation }) {
     const [radio, setRadio] = useState("");
     const [isHidePass, setIsHidePass] = useState(true);
 
@@ -58,7 +58,10 @@ export default function Lab1e() {
                     </View>
                 </View>
 
-                <TouchableOpacity style={styles.customBtn}>
+                <TouchableOpacity
+                    style={styles.customBtn}
+                    onPress={() => navigation.navigate("Lab1d")}
+                >
                     <Text style={styles.textBtn}>REGISTER</Text>
                 </TouchableOpacity>
             </View>

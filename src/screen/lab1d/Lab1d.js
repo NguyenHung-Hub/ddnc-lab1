@@ -12,7 +12,7 @@ import eye from "../../../assets/eye.png";
 import facebook from "../../../assets/lab1d/facebook.png";
 import google from "../../../assets/lab1d/google.png";
 
-export default function Lab1d() {
+export default function Lab1d({ navigation }) {
     return (
         <View style={styles.wrapper}>
             <Text style={styles.text1}>LOGIN</Text>
@@ -36,7 +36,12 @@ export default function Lab1d() {
                 <Text style={styles.text2}>
                     When you agree to terms and conditions
                 </Text>
-                <Text style={styles.text3}>For got your password? </Text>
+                <Text
+                    style={styles.text3}
+                    onPress={() => navigation.navigate("Lab1b")}
+                >
+                    For got your password?{" "}
+                </Text>
                 <Text style={styles.text4}>Or login with </Text>
             </View>
             <View style={styles.socialContainer}>

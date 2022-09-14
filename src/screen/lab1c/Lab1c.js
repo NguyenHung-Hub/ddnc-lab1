@@ -8,8 +8,9 @@ import {
     TouchableOpacity,
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
+import HButton from "../../components/HButton";
 
-export default function Lab1c() {
+export default function Lab1c({ navigation }) {
     return (
         <View style={styles.container}>
             <LinearGradient
@@ -42,9 +43,14 @@ export default function Lab1c() {
                     <TextInput style={styles.input} maxLength={1} />
                 </View>
 
-                <TouchableOpacity style={styles.customBtn}>
-                    <Text style={styles.textBtn}>VERIFY CODE</Text>
-                </TouchableOpacity>
+                <HButton
+                    text="VERIFY CODE"
+                    bgColor="#E3C000"
+                    fontSize={20}
+                    textColor="black"
+                    width="100%"
+                    onPress={() => navigation.navigate("Lab1d")}
+                />
             </LinearGradient>
         </View>
     );
@@ -110,18 +116,18 @@ const styles = StyleSheet.create({
         borderColor: "#000",
     },
 
-    customBtn: {
-        alignItems: "center",
-        paddingVertical: 12,
-        paddingHorizontal: 36,
-        marginTop: 50,
+    // customBtn: {
+    //     alignItems: "center",
+    //     paddingVertical: 12,
+    //     paddingHorizontal: 36,
+    //     marginTop: 50,
 
-        width: "100%",
-        backgroundColor: "#E3C000",
-    },
-    textBtn: {
-        color: "black",
-        fontWeight: "bold",
-        fontSize: 20,
-    },
+    //     width: "100%",
+    //     backgroundColor: "#E3C000",
+    // },
+    // textBtn: {
+    //     color: "black",
+    //     fontWeight: "bold",
+    //     fontSize: 20,
+    // },
 });

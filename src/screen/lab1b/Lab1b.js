@@ -10,8 +10,9 @@ import {
 import { LinearGradient } from "expo-linear-gradient";
 import lock from "../../../assets/lab1b/lock.png";
 import { AntDesign } from "@expo/vector-icons";
+import HButton from "../../components/HButton";
 
-export default function Lab1b() {
+export default function Lab1b({ navigation }) {
     return (
         <View style={styles.container}>
             <LinearGradient
@@ -37,9 +38,14 @@ export default function Lab1b() {
                     <TextInput style={styles.input} placeholder="Email" />
                 </View>
 
-                <TouchableOpacity style={styles.customBtn}>
-                    <Text style={styles.textBtn}>NEXT</Text>
-                </TouchableOpacity>
+                <HButton
+                    text="NEXT"
+                    bgColor="#E3C000"
+                    textColor="black"
+                    fontSize={20}
+                    width="100%"
+                    onPress={() => navigation.navigate("Lab1c")}
+                />
             </LinearGradient>
         </View>
     );
